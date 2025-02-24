@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex in Css</title>
+    <style>
+        body{
+            padding: 30px;
+        }
+        .con{
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .child{
+            height: 20px;
+            width: 100px;
+            background-color: blueviolet;
+            border: 1px solid seagreen;    
+        }
+        .ff{
+            align-self: flex-start;
+        }
+        .f{
+            flex-grow: 2;
+        }
+        .s{
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex in css</h1>
+    <div class="con">
+        <div class="child f">1</div>
+        <div class="child s">2</div>
+        <div class="child t">3</div>
+        <div class="child ff">4</div>
+    </div>
+</body>
+</html>

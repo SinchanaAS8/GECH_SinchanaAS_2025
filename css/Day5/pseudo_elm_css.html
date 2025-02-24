@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style>
+        ::selection{
+            color: aquamarine;
+            background-color: rgb(188, 237, 221);
+        }
+        .atag{
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .atag:hover{
+            color: rgb(181, 181, 227);
+        }
+        .atag::after{
+            content: "h";
+        }
+        .atag::before{
+            content: "i";
+        }
+        .fir::first-letter{
+            font-size: 40px;
+        }
+        .sec::first-line{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+    <div class="nav">
+    <h1>Welcome to my portal</h1>
+    <a href="home.html">Home</a><br>
+    <a href="index.html">About</a><br>
+    <a href="taskoftheday.html">Student Contact</a><br>
+    </div>
+    <p class="fir">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, accusamus!</p>
+    <p class="sec">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quaerat.</p>
+    </div>
+</body>
+</html>

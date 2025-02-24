@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- contact forms -->
+        <h1>Contact Form</h1>
+     
+        <form action="#" method="post" novalidate>
+           <input type="hidden" >
+           <lable for="name">Name:</lable>
+           <input type="text" name="name" id="name" placeholder="Enter your name" value="Sinchana" readonly required><br>
+           <label for="email">Email:</label>
+           <input type="email" name="email" id="email" placeholder="Enter ur Email" value="abc@gmail.com" required><br>
+           <lable for="msg">Msg:</lable>
+           <textarea name="msg" id="msg" placeholder="msg"></textarea><br>
+           <!-- <button type="submit">Submit</button> -->
+           <input type="submit" value="submit">
+        </form>
+   <br><br>
+    <form action="#" method="post">
+    <fieldset>
+            <legend>Persolan Inform</legend>
+        <lable for="Name">Name:</lable>
+        <input type="text" name="name" id="name" placeholder="Name"><br>
+        <lable for="email">Email:</lable>
+        <input type="email" name="email" id="email" placeholder="Email"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br>
+        <lable for="tel">Phone:</lable>
+        <input type="text" name="tel" id="tel" placeholder="Phone"><br>
+        <label for="gender" >Gender</label><br>
+        <input type="radio" name="gender" id="male"> <label for="Male">Male</label>
+        <input type="radio" name="gender" id="female"><label for="female">Female</label>
+    </fieldset><br>
+        <br>
+        <input type="file" name="img_file" id="img_file" accept=".jpg"><br><br>
+        <input type="file" name="img_file" id="img_file1" multiple>
+        <br>
+        <br>
+        <label for="skills">Skills</label><br>
+        <input type="checkbox" name="skills" id="html"><label for="html">HTML</label>
+        <input type="checkbox" name="skills" id="css"><label for="css">CSS</label>
+        <input type="checkbox" name="skills" id="js"><label for="js">JS</label><br><br>
+        <select name="con" id="con">
+            <option value="">select the Country</option>
+            <option value="india">India</option>
+            <option value="china">Chinaa</option>
+            <option value="nepal">Nepal</option>
+
+        </select>
+    </form><br><br>
+    <!-- Inserting Audio -->
+     <h1>Audio</h1>
+     <audio src="" controls autoplay muted></audio><br>
+
+     <audio controls >
+        <source src="" type="audio/mp3">
+        The browser will won't support mp3 audio 
+     </audio>
+     <br><br>
+
+     <!-- Inserting Video  -->
+      <h1>Video</h1>
+      <video src="./WhatsApp Video 2025-02-06 at 20.57.21_a7a07dab.mp4" controls autoplay muted></video>
+      <video controls>
+        <source src="" type="video/mp4">
+      </video>
+
+
+</body>
+</html>

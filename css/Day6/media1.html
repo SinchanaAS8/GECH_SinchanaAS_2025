@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           width: 100vw;
+           height: 100vh;
+           border: 2px solid black;
+           padding: 10px;
+           display: flex;
+           gap: 10px;
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .f{
+            background-color: antiquewhite;
+        }
+        .t{
+            background-color: aqua;
+        }
+        .th{
+            background-color: aquamarine;
+        }
+        .fo{
+            background-color: beige;
+        }
+        @media only screen and (max-width:500px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="child f"></div>
+       <div class="child t"></div>
+       <div class="child th"></div>
+       <div class="child fo"></div>
+     </div>
+</body>
+</html>

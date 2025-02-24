@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table,th,td,tr{
+            border:2px solid palegreen;
+            border-collapse: collapse; /* to remove the bouble border*/
+
+        }
+        th,td{
+            padding:20px;
+        }
+        table{
+            border-spacing:20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- /tables in html -->
+     <table>
+        <tr>
+            <th>Name</th>
+            <th>usn</th>
+            <th>age</th>
+        </tr>
+        <tr>
+            <td>sinchana</td>
+            <td>045</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>priya</td>
+            <td>040</td>
+            <td>19</td>
+        </tr>
+     </table>
+     <br>
+     <br>
+
+     <!-- vertical coloum -->
+     <table>
+        <tr>
+            <th>Name</th>
+            <td>sinchana</td>
+            <td>priya</td>
+            
+        </tr>
+        <tr>
+            <th>usn</th>
+            <td>045</td>
+            <td>040</td>
+        </tr>
+        <tr>
+            <th>age</th>
+            <td>21</td>
+            <td>19</td>
+        </tr>
+     </table>
+
+     <br>
+     <br>
+     <table>
+        <thead>
+            <tr>
+            <th>sun</th>
+            <th>mon</th>
+            <th>tue</th>
+            <th>wed</th>
+            <th>thr</th>
+            <th>fri</th>
+            <th>sat</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td colspan="2">2</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td rowspan="2">14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                
+            </tr>
+        </tbody>
+        
+     </table>
+</body>
+</html>

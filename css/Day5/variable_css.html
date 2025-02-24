@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <style>
+      :root {
+        --aqua: rgb(213, 137, 137);
+        --abc: rgb(196, 197, 224);
+      }
+      .ptag {
+        background-color: var(--aqua);
+      }
+      .divtag {
+        background-color: var(--abc);
+      }
+      .ptag1 {
+        --abc: red;
+        background-color: var(--abc);
+      }
+      .con{
+        margin: 20px solid;
+        border: 2px soli yellow;
+        width: 50vw;
+      }
+      .child{
+        border: 1px solid red;
+        width: 50%;
+      }
+      .f{
+        background-color: aqua;
+        z-index: 1;
+        position: relative;
+      }
+      .s{
+        background-color: rgb(140, 145, 215);
+        z-index: 3;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="ptag">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque ullam
+      dolores ipsam iure repellendus voluptas sed repellat magnam quasi!
+    </p>
+    <div class="divtag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at amet rem excepturi necessitatibus perspiciatis quis ducimus laudantium eum repellat?</div>
+    <p class="ptag1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quod.</p>
+     
+    <div class="con">
+        <div class="child f">1</div>
+        <div class="child s">2</div>
+    </div>
+</body>
+</html>

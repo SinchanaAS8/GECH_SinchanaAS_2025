@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid3</title>
+    <style>
+        .con{
+            width: 50vw;
+            height: 50vh;
+            border: 2px solid rgb(29, 29, 12);
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3,1fr);
+            /* grid-auto-rows: 120px 50px auto; */
+            column-gap: 30px;
+            row-gap: 30px;
+            padding: 20px;
+            align-items: center;
+            justify-items: center;
+        }
+        .child{
+            border: 2px solid rgb(158, 65, 28);
+            background-color: aquamarine;
+            width: 40px;
+            height: 40px;
+        }
+        .f{
+            align-self: flex-end;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="child f">1</div>
+        <div class="child s">2</div>
+        <div class="child t">3</div>
+        <div class="child o">4</div>
+        <div class="child ff">4</div>
+        <div class="child ff">4</div>
+        
+    </div>
+</body>
+</html>
