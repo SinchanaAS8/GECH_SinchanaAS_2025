@@ -1,0 +1,249 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #0c2d57;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a, .auth a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: url('./download.jpeg') no-repeat center;
+    background-size: cover;
+    height: 400px;
+    color: rgb(251, 251, 251);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+}
+
+.hero button {
+    background: #ff9800;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* About Section */
+.about {
+    justify-content: center;
+    display: flex;
+    padding: 50px;
+    animation: fadeIn 2s ease-in-out;
+    animation-name: fadeIn;
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about-content {
+    display: flex;
+    gap: 20px;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about .text {
+    width: 50%;
+}
+
+.about button {
+    background: #0c2d57;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+/* Departments */
+.departments {
+    text-align: center;
+    padding: 50px;
+}
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+@media only screen and (max-width: 500px) {
+    .department-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+.department {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.department img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.department h3 {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background: #0c2d57;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+ /* 3rd page */
+/* Gallery Banner */
+.contact-banner,.departments h1 {
+    background: url('banner-image.jpg') no-repeat center center/cover;
+    background-color: #0c2d57;
+    border-top:1px solid white ;
+    color: rgb(251, 251, 251);
+    text-align: center;
+    padding: 60px 20px;
+}
+.gallery-grid{
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+.gallery-banner h1 {
+    font-size: 56px;
+}
+
+.gallery-banner p {
+    font-size: 14px;
+}
+
+/* Gallery Container */
+.gallery-container {
+    padding: 50px;
+    text-align: center;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* 4th page */
+/* Contact Banner */
+.contact-banner {
+    background: url('banner-image.jpg') no-repeat center center/cover;
+    background-color: #0c2d57;
+    border-top:1px solid white ;
+    color: rgb(251, 251, 251);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-banner h1 {
+    font-size: 36px;
+}
+
+.contact-banner p {
+    font-size: 14px;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.contact-info,
+.contact-form {
+    width: 45%;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    margin-bottom: 15px;
+    color: #001F3F;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 5px;
+    color: #001F3F;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background: #001F3F;
+    border-top: #ddd;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Map Section */
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}

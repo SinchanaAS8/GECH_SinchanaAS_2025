@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Open Positions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 900px;
+            height: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #07162e;
+            background-color: #eef2ff;
+        }
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .positions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .card p {
+            background: #eef2ff;
+            padding: 8px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .card p:hover{
+            color:rgb(244, 243, 246) ;
+            background-color: rgb(133, 109, 228);
+        }
+        .highlight {
+            background: #1e293b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Open Positions</div>
+        <div class="positions">
+            <div class="card">
+                <h3><i class="fa-solid fa-paintbrush"></i> Design</h3>
+                <p>4 open positions</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-code"></i> Engineering</h3>
+                <p>8 open positions</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-gear"></i> Operations</h3>
+                <p>2 open positions</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-users"></i> People</h3>
+                <p>6 open positions</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-clipboard"></i> Sales</h3>
+                <p>7 open positions</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-graduation-cap"></i> University</h3>
+                <p>8 open positions</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
