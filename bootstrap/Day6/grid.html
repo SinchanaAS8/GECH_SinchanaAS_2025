@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+      .child{
+        height: 200px;
+      }
+      /* @media only screen  and (min-width:500px) and (max-width: 800px) {
+        .child{
+        grid-template-columns: 1fr; /* Single column layout 
+          }
+      } */
+    </style>
 </head>
 <body>
     <!-- max column in a row is 12 -->
-    <div class="container">
-        <div class="row">
-          <div class="col-4 bg-primary">
-            Column
-          </div>
-          <div class="col-4 bg-success">
-            Column
-          </div>
-          <div class="col-4 bg-danger">
-            Column
-          </div>
+    <div class="container h-50">
+        <div class="row row align-items-center">
+          <div class="col-lg-3 col-sm-6 col-12 bg-primary child">Column</div>
+          <div class="col-lg-3 col-sm-6 col-12 bg-success child">Column</div>
+          <div class="col-lg-3 col-sm-6 col-12 bg-danger child">Column</div>
+          <div class="col-lg-3 col-sm-6 col-12 bg-warning child">Column</div>
         </div>
       </div>
       
-      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>

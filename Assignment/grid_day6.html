@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Grid Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            height: 100vh;
+            padding: 10px;
+            background-color: white;
+        }
+        .header, .nav, .footer {
+            text-align: center;
+            justify-content: center;
+            padding: 15px;
+            background-color: #7d7f80;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+            color: black;
+            justify-content:center;
+        }
+        .box {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            background-color: #b6b8ba;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container grid-container">
+        <!-- Header -->
+        <header class="header bg-dark text-white">
+            <h1>Header</h1>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="nav bg-grey text-white">
+            <h3>Navigation Menu</h3>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="box">Content</div>
+            <div class="box bg-grey">Main Content</div>
+            <div class="box">Content</div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer bg-grey text-white">
+            <h4>Footer</h4>
+        </footer>
+    </div>
+
+</body>
+</html>
