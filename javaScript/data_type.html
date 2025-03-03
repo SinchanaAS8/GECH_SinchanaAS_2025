@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    <h3>1. Numbers</h3>
+    <h3>2.strings</h3>
+    <h3>3.Boolean</h3>
+    <h3>4. undefined</h3>
+    <h3>5. null</h3>
+    <h3>6. Bigint</h3>
+    <h3>7.object</h3>
+    <h3>8. Symbol</h3>
+
+    <script>
+        //1.Number
+        //var, let, const
+        let a=12;
+        console.log("value of a: ",a);
+        console.log("type of a:",typeof a);
+
+        //2.string
+        let b = "hello";
+        console.log("value of b: ",b);
+        console.log("type of b:",typeof b);
+
+        //3.Boolean
+        let c=true;
+        console.log("value of c: ",c);
+        console.log("type of c:",typeof c);
+
+        //4. undefined
+        let d;
+        console.log("value of c: ", d);
+        console.log("type of c: ",typeof d);
+        d=30;
+        console.log("value of d: ", d);
+        console.log("type of d: ",typeof d);
+
+        //5. null
+        let e=null;
+        console.log("value of e:", e);
+        console.log("type of e:",typeof e);
+
+        //bigint
+        let f= BigInt("121");
+        //let f= 121n;
+        console.log("value of f:", f);
+        console.log("type of f:",typeof f);
+
+        //7. Object
+        let obj = [1,5,3,6,49,8]
+        console.log("value of obj: ", obj);
+        console.log("type of obj: ", typeof obj);
+
+        let obj1={
+            fname: "some",
+            Lname: "thing"
+        }
+        console.log("value of obj1: ", obj1);
+        console.log("type of obj1: ", typeof obj1);
+
+
+    </script>
+</body>
+</html>

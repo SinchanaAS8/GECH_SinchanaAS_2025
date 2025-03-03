@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmlJS</title>
+</head>
+<body>
+    <h3>We can change HTML content</h3>
+    <p id="demo">This is existing content</p>
+    <button type="button" onclick="document.getElementById('demo').innerText='Hello Jimin changed content'">HTML JS</button>
+    
+    <h3>2.Change the attribute of HTML</h3>
+    <img src="./2.jpg" alt="pic" width="100px" height="100px" id="bulb_img">
+    <button type="button" onclick="document.getElementById('bulb_img').src='./1.jpg'">Turn On</button>
+    <button type="button" onclick="document.getElementById('bulb_img').src='./2.jpg'">Turn Off</button>
+
+    <h3>3.change the css Style</h3>
+    <p id="demo2">Lorem.</p>
+    <button type="button" onclick="document.getElementById('demo2').style.color='red'">Click</button>
+    
+    <h3>4.hide html code</h3>
+    <p id="demo3">Lorem.</p>
+    <button type="button" onclick="document.getElementById('demo3').style.display='none'">Click</button>
+
+    <h3>5.show html code</h3>
+    <p id="demo4" style="display: none;">Lorem, ipsum.</p>
+    <button type="button" onclick="document.getElementById('demo4').style.display='block'">Click</button>
+
+</body>
+</html>

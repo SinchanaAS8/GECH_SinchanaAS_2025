@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+</head>
+<body>
+    <h1>Variables to declare</h1>
+    <h3>4 Types</h3>
+    <p>automatically</p>
+    <p>var</p>
+    <p>let</p>
+    <p>const</p>
+
+    <script>
+        //automatically
+        var1 = 12;
+        console.log("value: ", var1);
+        console.log("type: ",typeof var1);
+
+        var var2= "Tea";
+        console.log("value: ", var2);
+        console.log("type: ",typeof var2);
+
+        let var3= true;
+        console.log("value: ", var3);
+        console.log("type: ",typeof var3);
+
+        const var4= 20n;
+        console.log("value: ", var4);
+        console.log("type: ",typeof var4);
+    </script>
+
+    <script>
+        // difference between var, let and const
+        //re declare
+        var var1=23;
+        console.log("value: ", var1);
+        var var1= "hvjs";
+        console.log("value: ", var1);
+
+        //let- same variable name cant declare
+        let var12="priya";
+        console.log("value: ", var12);
+         var12=7;
+        console.log("value: ", var12);
+
+        //const-can't change the variable value
+        const pi=3.14;
+        console.log("value: ", pi);
+        pi=5;
+        console.log("value: ", pi);
+    </script>
+</body>
+</html>
