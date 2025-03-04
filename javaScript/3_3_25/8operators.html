@@ -37,6 +37,15 @@
     </dl>
      
     <script>
+        let var1=121;
+        let var2="121";
+        console.log(var1===var2);//cpmpar the data types
+        console.log(var1==var2);//cpmpar the value
+        console.log(var1!=var2);//false
+        console.log(var1!==var2);//cpmpar the value
+
+    </script>
+    <script>
         // arthmetic opt
         let a=15, b=10;
         console.log("add:",a+b);
@@ -47,7 +56,7 @@
         //Assign Opt
         let c = 10;
         c += 3;
-        console.log(c);
+        console.log("assign:", c);
         c -= 5;
         console.log(c);
         c /=2;
@@ -64,7 +73,7 @@
 
         //comparistion opt
         let e=10, f=2
-        console.log(e == f);
+        console.log("compari:",e == f);
         console.log(e===10);
         console.log(e!=10);
         console.log(e!==2);
@@ -74,16 +83,21 @@
         console.log(e>=10);
 
         //Bitwise opt
-        console.log(5 & 1);
-        console.log(5 | 1);
+        console.log("Bit:",5 & 1);
+        console.log(5 | 2);
         console.log(9^1);
         console.log(~2);
         console.log(5<<1);
         console.log(5>>1);
+        let var3=3;
+        let var4=2;
+        console.log("3&2:",var3 & var4);
+        console.log(var3^var4);//cpmpar the value
+        console.log(var3&&var4);//cpmpar the value
 
         //Logical opt
-        let x=20;
-        console.log(x>18 &&x<40);
+        let x=3, y=2;
+        console.log("logic:",x>18 &&x<40);
         console.log(x>25 || x<30);
         console.log(!false);
 
@@ -91,6 +105,8 @@
         let num = 2;
         let result = (num > 5) ? "Greater" : "Smaller";
         console.log(result);
+
+        console.log("ternary: ", (6>55) ? "True" : "False");
     </script>
 </html>
 </body>
