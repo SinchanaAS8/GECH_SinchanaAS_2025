@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        const car_obj = {
+            Name : "Tesla",
+            Type : "Ev",
+            Wheel : 4,
+            "four seat" : true ,
+            speed: function () {
+                 console.log("Tesla is moving by 60km/h");
+            }
+        }
+        console.log(car_obj);
+        console.log(car_obj.Name);
+        console.log(car_obj.Wheel);
+        car_obj.speed();
+        console.log(car_obj["four seat"]);
+
+        // adding item to an object
+        car_obj.color = "red" ;
+        console.log("car object: ", car_obj);
+
+        // deleting item from object
+        delete car_obj.Name;
+        console.log("after car object ", car_obj);
+
+        //clone the car object
+        const new_obj = {...car_obj}
+        console.log("new object: ", new_obj);
+    </script>
+</body>
+</html>

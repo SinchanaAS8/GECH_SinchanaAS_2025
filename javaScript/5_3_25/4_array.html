@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array in JS</h1>
+    <p>Operations in array</p>
+    <p>1. Push and pop</p>
+    <p>2. shift and unshipt</p>
+     
+    <script>
+        let array1 = [1,2,3,4,5,6];
+        console.log(array1);
+        console.log(array1[2]);
+
+        // push and pop - last index operation 
+        array1.push(25);
+        console.log("pushed: ",  array1);
+        const res = array1.pop();
+        console.log("poped: ",  res); //shows the poped ele
+        console.log("poped array: ",  array1);
+
+        //unshift and shift- starting index operation 
+        array1.unshift(25);
+        console.log("unshift: ",  array1);
+        const res1 = array1.shift();
+        console.log("shift: ",  res1); //shows the poped ele
+        console.log("shifted array: ",  array1);
+
+        let array3 = [7, "Hi", true, null, {"name": "Priya"}]
+        console.log(array3);
+        console.log(typeof array3[4]);
+
+        let len = array3.length
+        for(let item of array3) {
+            console.log(item, typeof(item));
+        }
+
+    </script>
+</body>
+</html>

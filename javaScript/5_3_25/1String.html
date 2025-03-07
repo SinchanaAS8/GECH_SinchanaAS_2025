@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        //2. Slice
+        let str2 = "javascript"
+        let str3 = str2.slice(2, 7);
+        console.log(str2[5]);
+        console.log("the sliced string: ",str2.slice(-8, -3));
+
+        //3. Substring
+        let str4 = "HelloPriya"
+        let str5 = str4.substring(2, 7);
+        console.log(`the string is ${str5}`);
+        console.log(`the string is ${str5.substring(-13, 2)}`);
+
+        //4. substr
+        let str6 = "Hello World"
+        let str7 = str6.substr(2, 7); // last index is included
+        console.log(`the string is ${str7}`);
+        console.log(`the string is ${str6.substr(-9, 7)}`);
+
+        //5. replace
+        let str8 = "Hello Priya"
+        let str9 = str8.replace("Priya", "Mokshitha");
+        console.log(`The string is ${str9}`);
+    
+        //6. toUpperCase()
+        let str10 = "hello priya"
+        let str11 = str10.toUpperCase();
+        console.log(`The string is ${str11}`);
+
+        //7. toLowerCase()
+        let str12 = "HelLo priya"
+        let str13 = str12.toLowerCase();
+        console.log(`The string is ${str13}`);
+
+        //8. trim
+        let str14 = "    Hello     ";
+        let str15 = str14.trim()
+        console.log(`The string is ${str14}`);
+        console.log(`The string is ${str15}`);
+        str16 = str14.trimEnd()
+        console.log(`The string is  ${str16}`);
+
+        //9. indexof()
+        let str17 = "Hello Shiva Shekara Shobha"
+        let index = str17.indexOf("Shiva");
+        console.log(`The index is  ${index}`);
+
+        //10. startswith()
+        let start = str17.startsWith("Hello");
+        console.log(`The str starts with  ${start}`);
+
+        //11. endsWith()
+        let ends = str17.endsWith("bha");
+        console.log(`The str ends with  ${ends}`);
+
+        //12. includes()
+        let inc = str17.includes("shiva");
+        console.log(`The includes is  ${inc}`);
+
+        //13. Concat()
+        let concat = str17.concat(" ","Sinchana")
+        console.log(`The index is  ${concat}`);
+            </script>
+</body>
+</html>

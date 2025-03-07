@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array Methods</h1>
+    <p>1. foreach*</p>
+    <p>2. map*</p>
+    <p>3. filter* - filters the array wrt given condition</p>
+    <p>4. reduce*</p>
+    <p>5. sort</p>
+    <p>6. splice(strat, delete, insert)</p>
+    <p>7. each - condition statisfy true else false</p>
+    <p>8. some</p>
+
+    <script>
+        const array1 = [1,2,3,4,5,6];
+        //1. foreach
+        array1.forEach((curElm, index, array)=>{
+            console.log(curElm * curElm, "index is: ", index, "array is: ", array);
+        })
+        const users = [
+            { firstName: "Namjoon", age: 28, address: "Hassan" },
+            { firstName: "Jin", age: 25, address: "Bangalore" },
+            { firstName: "Yoongi", age: 30, address: "Mysore" },
+        ];
+        users.forEach((curElm)=>{
+            console.log(curElm.firstName);
+        })
+
+        //2. map
+        const array2 = [2,5,7,6,4,8];
+        const array3 = array2.map((curEle, index, array)=>{
+            return curEle * curEle;
+        })
+        console.log("array2: ", array2);
+        console.log("array3: ", array3); // give as a array
+
+        const user = [
+            { firstName: "Namjoon", age: 28, address: "Hassan" },
+            { firstName: "Jin", age: 25, address: "Bangalore" },
+            { firstName: "Yoongi", age: 30, address: "Mysore" },
+        ];
+        const users2 = user.map((ele)=>{
+             return ele.firstName;
+        })
+        console.log("array2: ", users2);
+
+        //3. filter
+        const array4 = [1,2,3,4,5,6,7,8,9];
+        const array5 = array4.filter((curele)=>{
+            return curele %2 == 0;
+        })
+        console.log("array5: ", array5); //2,4,6,8 - filter the func return
+
+        //4. Reduce
+        const array6 = [1,2,3,4,5];
+        const res = array6.reduce((previous, current)=>{
+            return previous + current;
+        },10) // ,10 will become the privous value so current start with index[0]
+        console.log("the result is: ", res);
+
+        const numbers = [4, 2, 9, 1, 5];
+
+        //5.  Sort
+        users.sort((a, b) => a.age - b.age);
+        console.log("Sorted Users by Age: ", users);
+        
+        //6. splice
+        const fruits = ["Apple", "Banana", "Cherry", "Mango", "Pineapple"];
+        const removedFruits = fruits.splice(1, 2);
+        console.log("Updated Fruits Array: ", fruits);
+        console.log("Removed Fruits: ", removedFruits);
+        fruits.splice(1, 0, "Grapes", "Orange");
+        console.log("Fruits after adding: ", fruits);
+   
+        //7. each
+        //8. some
+        const ages = [21, 25, 30, 17, 40];
+        const hasMinor = ages.some((age) => age < 18);
+        console.log("Is there any minor? ", hasMinor);
+        const is25orOlder = ages.some((age) => age >= 25);
+        console.log("Is any user 25 or older? ", is25orOlder);
+        
+
+            </script>
+</body>
+</html>

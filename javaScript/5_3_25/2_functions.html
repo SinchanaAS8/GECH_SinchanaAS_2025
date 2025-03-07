@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h2>3 ways to declare a function</h2>
+    <p>1. function decleration</p>
+    <p>2. fun expression</p>
+    <p>3. arrow fun0</p>
+    <p>1. function declaretion Syntax:
+        <pre> function_name() {
+            //code
+        }
+        //call
+        function(arg);
+        </pre> </p>
+      
+        <p>2.function expression 
+            <pre> const function_name = function(){
+                //code
+            }
+            //call
+            function_name(arg);
+            </pre> </p>
+
+        <p>3.arrow function
+            <pre> const function_name = () => {
+                //code
+            }
+            //call
+            function_name(arg);
+            </pre> </p>
+
+        <h2>4 Types of function</h2>
+        <p>1. function accepting a parameter and not returning value.</p>
+        <p>2. function accepting a parameter and returning value.</p>
+        <p>3. function not accepting a parameter and not returning value.</p>
+        <p>4. function not accepting a parameter and returning value.</p>
+
+    <script>
+
+        //function display()
+        function display() {
+            console.log("This is display function");
+        }
+
+        //function call
+        display();
+
+        //1. function accepting a parameter and not returning value.
+        function para_not_return(number){   // paramete
+            console.log(`the given number is ${number}`); //accepting and printing
+        }
+        para_not_return(25); //argiment
+
+        //2. function accepting a parameter and returning value.
+        function para_return(number){
+            return number
+        }
+        const res = para_return(153);
+        console.log(`the result is ${res}`);
+
+        //3.function not accepting a parameter and not returning value.
+        function not_acc(){
+            console.log("Not accepting not returning");
+        }
+        not_acc();
+
+        //function not accepting a parameter and returning value.
+        function not_acc_ret(){
+           return 352;
+        }
+        const res1= not_acc_ret();
+        console.log(`The result ie ${res1}`);
+  
+       // odd or even
+    //    let num = 22
+    //    function even_odd(num){
+    //     if ( num %2  === 0){
+    //         console.log("the number is Even ");
+    //     }
+    //     else{
+    //         console.log("the number is odd");
+    //     }
+    //    }
+       
+       function iseven(number){
+        return number % 2 === 0;
+       }
+       const res6 = iseven(30);
+       if (res6 === true){
+        console.log("Even");
+       }
+       else{
+        console.log("odd");
+       }
+
+
+       //2.function expression
+       const display1 = function (){
+        console.log("This is display expression");
+       }
+       display1();
+
+       //3.arrow function
+       const display2 = () => {
+        console.log("This is display arrow function");
+       }
+
+    </script>
+</body>
+</html>
