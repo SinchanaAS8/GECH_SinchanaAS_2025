@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="heading1">heading1</p>
+    <p class="heading2">heading2</p>
+    <p class="heading3">heading3</p>
+    <script>
+    const update = (element,text,color,time) =>{
+        return new promise((resolve,reject) =>{
+        if(element){
+            element.textcontent = text;
+            element.style.color = color;
+            resolve()
+        }
+        else{
+            reject("cont do this")
+        }
+    },time)
+    
+    }
+    update(heading1,one,red,3000)
+    .then
+</script>
+</body>
+</html>

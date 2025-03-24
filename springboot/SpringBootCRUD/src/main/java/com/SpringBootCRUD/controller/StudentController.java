@@ -27,7 +27,7 @@ public class StudentController {
 	}
 
 
-	@GetMapping({"","/"})
+	@GetMapping({"/students"})
 	public String getAllStudents(Model model) {
 		List<Student> students = studentServices.getAllStudents();
 		model.addAttribute("students", students);
@@ -49,7 +49,7 @@ public class StudentController {
     @PostMapping("/save-student")
     public String saveStudent(@ModelAttribute Studentdto studentdto) {
        studentServices.saveStudent(studentdto);
-    	return "redirect:/";
+    	return "redirect:/students";
     }
     
     @GetMapping("/edit-student")
@@ -69,12 +69,12 @@ public class StudentController {
     @PostMapping("/edit-student")
     public String updateStudent(@ModelAttribute Studentdto studentdto, @RequestParam Long id ) {
     	studentServices.updateStudent(studentdto,id);
-    	return "redirect:/";
+    	return "redirect:/students";
     }
     @GetMapping("/delete-student")
     public String deleteStudent(@RequestParam Long id) {
         studentServices.deleteStudent(id);
-        return "redirect:/"; 
+        return "redirect:/students"; 
     }
 
 
