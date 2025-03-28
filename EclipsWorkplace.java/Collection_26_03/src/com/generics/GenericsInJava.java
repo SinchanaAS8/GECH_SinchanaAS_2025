@@ -28,7 +28,7 @@ public class GenericsInJava {
 		List<Integer> list = new ArrayList<>(); //type safety
 		list.add(12);
 		list.add(125);
-//		list.add(12.5); // it is not posible as we declare Integer type firstly
+//		list.add(12.5); // it is not possible as we declare Integer type firstly
 		int a = list.get(1);
 		System.out.println(a);
 		System.out.println(list);

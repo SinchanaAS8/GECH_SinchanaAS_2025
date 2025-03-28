@@ -9,7 +9,7 @@ public class LinkedList {
 		 * LinkedList:
 		 * ==========
 		 * * Linked list is a improved version of doubly linked list
-		 * * Linked list underline data structure is Dynamic array --> we can insert and delete without giving size of an array
+		 * * Linked list underline data structure is doubly linked list --> we can insert and delete without giving size of an array
 		 * * Linked list allow duplicate
 		 * * LinkedList allow random access(using index)
 		 * * LinkedList will allow null value

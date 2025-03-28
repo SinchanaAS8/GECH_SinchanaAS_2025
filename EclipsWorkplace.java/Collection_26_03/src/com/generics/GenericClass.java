@@ -1,6 +1,6 @@
 package com.generics;
 
-class Student<T>{  // <T> will be of ant data type we declare
+class Student<T>{  // <T> will be of an data type we declare
 	T student_id;
 
 	public Student(T student_id) {

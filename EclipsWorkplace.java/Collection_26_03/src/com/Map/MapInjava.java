@@ -34,6 +34,29 @@ public class MapInjava {
 		System.out.println(treemap);
 		treemap.remove(7);
 		System.out.println(treemap);
+		
+		System.err.println("=========");
+		TreeMap<Integer,String> treemap1=new TreeMap<>();
+		treemap1.put(1,"apple");
+		treemap1.put(2, "banana");
+		treemap1.put(3,"kivi");
+		treemap1.put(4,"grapes");
+		System.out.println(treemap1);
+		System.out.println(treemap1.get(2));
+        treemap1.remove(4);
+        System.out.println(treemap1);
+        System.out.println(treemap1.firstKey());
+        System.out.println(treemap1.containsKey(3));
+        System.out.println(treemap1.containsValue("kivi"));
+        System.out.println(treemap1.replace(1, "cherry"));
+        System.out.println(treemap1);
+        System.out.println(treemap1.size());
+        System.out.println(treemap1.higherKey(1));
+        System.out.println(treemap1);
+        System.out.println(treemap1.reversed());
+        System.out.println(treemap1.values());
+        System.out.println(treemap1.keySet());
+
 
 	}
 
