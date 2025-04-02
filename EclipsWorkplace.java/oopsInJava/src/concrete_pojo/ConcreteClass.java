@@ -19,9 +19,6 @@ public class ConcreteClass {
 		 *  concrete class:
 		 *  ===============
 		 *    The Class contain full implementaion /body method
-		 */ 
-		
-		
+		 */
 	}
-
 }
