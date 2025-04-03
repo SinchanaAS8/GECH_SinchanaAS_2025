@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+<body style="margin: 100px;">
+    <h1>Add Student</h1>
+    
+    <form th:action="@{/add-student}" method="post" th:object="${student}" novalidate>
+        
+        <label for="name">Name:</label>
+        <input type="text" th:field="*{name}" id="name" placeholder="Enter your name" required>
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+        
+        <label for="age">Age:</label>
+        <input type="number" th:field="*{age}" id="age" placeholder="Enter your age" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" th:field="*{email}" id="email" placeholder="Enter your Email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" th:field="*{password}" id="password" placeholder="Enter your Password" required>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
