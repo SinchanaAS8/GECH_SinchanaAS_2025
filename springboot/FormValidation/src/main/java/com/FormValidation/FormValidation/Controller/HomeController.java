@@ -1,6 +1,8 @@
 package com.FormValidation.FormValidation.Controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,8 +10,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.FormValidation.FormValidation.dto.StudentDTO;
+import com.FormValidation.FormValidation.model.Student;
+import com.FormValidation.FormValidation.repository.StudentRepository;
 import com.FormValidation.FormValidation.service.StudentService;
 
 import jakarta.validation.Valid;
@@ -20,36 +26,70 @@ import jakarta.validation.Valid;
 public class HomeController {
 	
 	private final StudentService studentService;
+	private final StudentRepository studentRepository;
 	// Constructor Injection
 	@Autowired
-	public HomeController(StudentService studentService) {
+	
+//	public HomeController(StudentService studentService) {
+//		super();
+//		this.studentService = studentService;
+//	}
+	public HomeController(StudentService studentService, StudentRepository studentRepository) {
 		super();
 		this.studentService = studentService;
-	}
-	
-
-	@GetMapping({"","/"})
-	public String home() {
-		return "home";
+		this.studentRepository = studentRepository;
 	}
 	
 	@GetMapping("/add-student")
-	public String add_student(Model model) {
+	public String addStudent(Model model) {
 		model.addAttribute("studentDTO", new StudentDTO());
 		return "add_student";
 	}
+	
+	
+	@GetMapping("/")
+	public String listStudents(Model model) {
+	    List<Student> students = studentService.getAllstudents();
+	    model.addAttribute("students", students);
+	    return "home";
+	}
+
 		
 	@PostMapping("/add-student")
-	public String add_student(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result, Model model) {
+	public String showaddStudent(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result, Model model, RedirectAttributes attributes) {
 		if(result.hasErrors()) {
 			return "add_student";
 		}
-		System.out.println(studentDTO.getName());
-		studentService.saveStudent(studentDTO);
-		return "redirect:/";
-
 		
+		System.out.println(studentDTO.getName()+"2");
+		studentService.saveStudent(studentDTO);
+		attributes.addFlashAttribute("success", "Student added successfuly");
+		return "redirect:/";	
 	}
+	@GetMapping("/std-delete")
+	public String deleteStudent(@RequestParam Long id, RedirectAttributes attributes) {
+		studentService.deleteStudent(id);
+		attributes.addFlashAttribute("success", "Student deleted successfuly");
+		return "redirect:/";
+	}
+	@GetMapping("/std-edit")
+	public String editStudent(@RequestParam Long id, Model model) {
+		StudentDTO studentDTO = studentService.editStudent(id);
+		Student student = studentRepository.findById(id).get();
+		model.addAttribute("studentDTO", studentDTO);
+		model.addAttribute("student", student);
+		return "edit_student";
+	}
+	
+	@PostMapping("/edit-student")
+	public String updateStudent(@Valid @ModelAttribute StudentDTO studentDTO,BindingResult result,@RequestParam Long id,Model model ) {
+		if(result.hasErrors()) {
+			Student student=studentRepository.findById(id).get();
+			 model.addAttribute("student",student);
+			return "edit_student";
+		}
+		studentService.updateStudent(studentDTO,id);
+	 return "redirect:/";
 
-
+    }
 }

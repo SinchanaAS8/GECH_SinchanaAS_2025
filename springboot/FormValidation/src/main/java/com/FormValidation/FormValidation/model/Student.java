@@ -1,5 +1,6 @@
 package com.FormValidation.FormValidation.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,29 +10,37 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "students")
 public class Student {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	@Column(name="std_id")
+	private Long id;
+	@Column(name="std_name")
 	private String name;
+	@Column(name="std_age")
 	private int age;
+	@Column(name="std_email")
 	private String email;
-	private String Password;
+	@Column(name="std_pass")
+	private String password;
+	private String imagepath;
 	public Student() {
 		super();
 	}
-	public Student(long id, String name, int age, String email, String password) {
+	
+	public Student(Long id, String name, int age, String email, String password, String imagepath) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.email = email;
-		Password = password;
+		this.password = password;
+		this.imagepath = imagepath;
 	}
-	public long getId() {
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -55,10 +64,18 @@ public class Student {
 		this.email = email;
 	}
 public String getPassword() {
-		return Password;
+		return password;
 	}
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 
+	public String getImagepath() {
+		return imagepath;
+	}
+
+	public void setImagepath(String imagepath) {
+		this.imagepath = imagepath;
+	}
+    
 }

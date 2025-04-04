@@ -5,22 +5,24 @@
     <title>Add Student</title>
 </head>
 <body style="margin: 100px;">
-    <h1>Add Student</h1>
-    
-    <form th:action="@{/add-student}" method="post" th:object="${studentDTO}" novalidate>
-        	
+    <h1>Edit Student</h1>
+    <form th:action="@{/edit-student(id=${student.id})}" method="post" th:object="${studentDTO}" novalidate>
+        
         <label for="name">Name:</label>
         <input type="text" th:field="*{name}" id="name" placeholder="Enter your name" required><br>
         <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
         
         <label for="age">Age:</label>
         <input type="number" th:field="*{age}" id="age" placeholder="Enter your age" required><br>
+            <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></p>
         
         <label for="email">Email:</label>
         <input type="email" th:field="*{email}" id="email" placeholder="Enter your Email" required><br>
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
         
         <label for="password">Password:</label>
         <input type="password" th:field="*{password}" id="password" placeholder="Enter your Password" required><br>
+        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
         
         <input type="submit" value="Submit">
     </form>
