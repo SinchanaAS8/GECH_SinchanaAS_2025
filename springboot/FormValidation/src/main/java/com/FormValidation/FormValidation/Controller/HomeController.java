@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -50,6 +51,7 @@ public class HomeController {
 	@GetMapping("/")
 	public String listStudents(Model model) {
 	    List<Student> students = studentService.getAllstudents();
+	    students.stream().forEach(s->System.out.println(s));
 	    model.addAttribute("students", students);
 	    return "home";
 	}
@@ -57,6 +59,9 @@ public class HomeController {
 		
 	@PostMapping("/add-student")
 	public String showaddStudent(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result, Model model, RedirectAttributes attributes) {
+		if(studentDTO.getImage().isEmpty()) {
+			result.addError(new FieldError("studentDTO", "image", "Image is required"));
+		}
 		if(result.hasErrors()) {
 			return "add_student";
 		}

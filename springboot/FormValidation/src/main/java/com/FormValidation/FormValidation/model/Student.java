@@ -22,19 +22,19 @@ public class Student {
 	private String email;
 	@Column(name="std_pass")
 	private String password;
-	private String imagepath;
+	private String imagePath;
 	public Student() {
 		super();
 	}
 	
-	public Student(Long id, String name, int age, String email, String password, String imagepath) {
+	public Student(Long id, String name, int age, String email, String password, String imagePath) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.email = email;
 		this.password = password;
-		this.imagepath = imagepath;
+		this.imagePath = imagePath;
 	}
 
 	public Long getId() {
@@ -70,12 +70,15 @@ public String getPassword() {
 		this.password = password;
 	}
 
-	public String getImagepath() {
-		return imagepath;
+
+
+	public String getImagePath() {
+		return imagePath;
 	}
 
-	public void setImagepath(String imagepath) {
-		this.imagepath = imagepath;
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
+
     
 }
