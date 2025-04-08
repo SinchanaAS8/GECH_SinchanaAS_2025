@@ -28,13 +28,18 @@ public class StudentService {
 	
 	public void saveStudent(StudentDTO studentDTO) {
 		MultipartFile image = studentDTO.getImage();
+		MultipartFile resume = studentDTO.getResume();
 		Date createdAt = new Date();
 		String storeImageName = createdAt.getTime()+"_"+image.getOriginalFilename();
+
+		String storeResumeName = createdAt.getTime()+"_"+resume.getOriginalFilename();
 		System.out.println(storeImageName);
 		
 		try {
 			String uploadDir = "public/images/";
+			String uploadDirr = "public/resume/";
 			Path uploadPath = Paths.get(uploadDir);
+			Path uploadPath1 = Paths.get(uploadDirr);
 			if(!Files.exists(uploadPath)) {
 				Files.createDirectories(uploadPath);
 			}
@@ -47,6 +52,24 @@ public class StudentService {
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
+		
+		//document
+		
+//		  if (document != null && !document.isEmpty()) {
+//		        try {
+//		            String storeDocumentName = createdAt.getTime() + "_" + document.getOriginalFilename();
+//		            String docUploadDir = "public/documents/";
+//		            Path docUploadPath = Paths.get(docUploadDir);
+//		            if (!Files.exists(docUploadPath)) {
+//		                Files.createDirectories(docUploadPath);
+//		            }
+//		            InputStream inputStream = document.getInputStream();
+//		            Files.copy(inputStream, Paths.get(docUploadDir + storeDocumentName), StandardCopyOption.REPLACE_EXISTING);
+//		        } catch (Exception e) {
+//		            System.out.println("Document upload error: " + e.getMessage());
+//		        }
+//		    }
+		
 
 		Student student = new Student();
 		student.setName(studentDTO.getName());
@@ -54,6 +77,7 @@ public class StudentService {
 		student.setEmail(studentDTO.getEmail());
 		student.setPassword(studentDTO.getPassword());
 		student.setImagePath(storeImageName);
+		student.setResumePath(storeResumeName);
 		studentRepository.save(student);
 	}
 
@@ -61,7 +85,9 @@ public class StudentService {
 		Student student = studentRepository.findById(id).get();
 		//What is the image path of the student
 		String uploadDir = "public/images/";
-		Path imagePath = Paths.get(uploadDir+student.getImagePath());
+		String uploadDir1 = "public/resume/";
+		Path resumePath = Paths.get(uploadDir+student.getImagePath());
+		Path imagePath = Paths.get(uploadDir1+student.getResumePath());
 		try {
 			Files.delete(imagePath);
 		} catch (Exception e) {
@@ -100,6 +126,27 @@ public class StudentService {
 				}
 			student.setImagePath(storeImageName);
 		}
+		
+		if(!studentDTO.getResume().isEmpty()) {
+			Path oldResumePath = Paths.get("public/resume/"+student.getResumePath());
+			try {
+				Files.delete(oldResumePath);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			MultipartFile resume = studentDTO.getResume();
+			Date createdAt = new Date();
+			String storeResumeName = createdAt.getTime()+"_"+resume.getOriginalFilename();
+			String uploadDir1 = "public/resume/";
+			try {
+				InputStream inputStream = resume.getInputStream();
+				Files.copy(inputStream, Paths.get(uploadDir1+storeResumeName), StandardCopyOption.REPLACE_EXISTING);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			student.setResumePath(storeResumeName);
+		}
+
 		student.setName(studentDTO.getName());
 		student.setAge(studentDTO.getAge());
 		student.setEmail(studentDTO.getEmail());

@@ -29,6 +29,14 @@
         <input type="file" id="image" th:field="*{image}"><br>
         <p th:if="${#fields.hasErrors('image')}"th:errors="*{image}"><br></p>
         
+        <!-- resume -->
+		<label for="resume">Resume:</label>
+        <a th:href="@{'resume/'+${student.resumePath}}" target="_blank">View Resume</a>
+        <p th:text="${student.resumePath}"></p>
+        <input type="file" th:field="*{resume}" id="resume"><br>
+        <p th:if="${#fields.hasErrors('resume')}" th:text="${#fields.errors('resume')}"></p>
+        
+        
         <input type="submit" value="Submit">
     </form>
 </body>

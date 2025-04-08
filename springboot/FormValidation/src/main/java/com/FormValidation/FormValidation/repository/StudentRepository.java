@@ -7,5 +7,6 @@ import com.FormValidation.FormValidation.model.Student;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long>{
+	public Student findByEmail(String Email);
 
 }

@@ -29,6 +29,12 @@
         <input type="file" id="image" th:field="*{image}"><br>
         <p th:if="${#fields.hasErrors('image')}"th:errors="*{image}"><br></p>
         
+        <!-- resume pdf -->
+		<label for="pdf">Resume</label>
+		<input type="file" id="pdf"  th:field="*{resume}"><br>
+		<p th:if="${#fields.hasErrors('resume')}" th:text="${#fields.errors('resume')}"></p>
+        
+        
         <input type="submit" value="Submit">
     </form>
 </body>

@@ -17,11 +17,24 @@ public class StudentDTO {
 	@NotBlank(message = "Student password is required")
 	private String password;
 	private MultipartFile image;
+	private MultipartFile resume;
 	
 	
+	public MultipartFile getResume() {
+		return resume;
+	}
+	public void setResume(MultipartFile resume) {
+		this.resume = resume;
+	}
 	public String getName() {
 		return name;
 	}
+//	public MultipartFile getDocument() {
+//		return document;
+//	}
+//	public void setDocument(MultipartFile document) {
+//		this.document = document;
+//	}
 	public void setName(String name) {
 		this.name = name;
 	}

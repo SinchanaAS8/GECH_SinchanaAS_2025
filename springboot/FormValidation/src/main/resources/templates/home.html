@@ -40,6 +40,7 @@
    <th>Age</th>
    <th>Email</th>
    <th>Actions</th>
+   <th>Resume</th>
    </tr>
    <tr th:each="student:${students}">
    <td th:text="${student.id}"></td>
@@ -53,6 +54,10 @@
    <a th:href="@{/std-edit(id=${student.id})}">Edit</a>
    <a th:href="@{/std-delete(id=${student.id})}">Delete</a>
    </td>
+    <td>
+                	<a th:href="@{'resume/'+${student.resumePath}}" target="_blank">View Resume</a>
+                	<p th:text="${student.resumePath}"></p>
+                </td>
    
    </tr>
    </table>

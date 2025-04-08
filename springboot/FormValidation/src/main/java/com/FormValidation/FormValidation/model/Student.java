@@ -18,16 +18,17 @@ public class Student {
 	private String name;
 	@Column(name="std_age")
 	private int age;
-	@Column(name="std_email")
+	@Column(unique = true)
 	private String email;
 	@Column(name="std_pass")
 	private String password;
 	private String imagePath;
+	private String resumePath;
 	public Student() {
 		super();
 	}
-	
-	public Student(Long id, String name, int age, String email, String password, String imagePath) {
+
+	public Student(Long id, String name, int age, String email, String password, String imagePath, String resumePath) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -35,6 +36,15 @@ public class Student {
 		this.email = email;
 		this.password = password;
 		this.imagePath = imagePath;
+		this.resumePath = resumePath;
+	}
+
+	public String getResumePath() {
+		return resumePath;
+	}
+
+	public void setResumePath(String resumePath) {
+		this.resumePath = resumePath;
 	}
 
 	public Long getId() {
@@ -46,6 +56,7 @@ public class Student {
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
